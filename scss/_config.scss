@@ -16,7 +16,7 @@ $background-opacity: 0.8;
       background-size: cover;
 
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         right: 0;
@@ -34,5 +34,35 @@ $background-opacity: 0.8;
         ),
         $home-image;*/
     }
+  }
+}
+
+// media Query Mixins
+
+// small screen
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+// med screen
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// large screen
+@mixin mediaLg {
+  @media screen and (min-width: 769px), (max-width: 1170px) {
+    @content;
+  }
+}
+
+// x-large screen
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
