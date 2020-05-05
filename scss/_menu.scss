@@ -62,10 +62,11 @@
     overflow: hidden;
   }
 
+  // nav side menu
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 6);
+    background: darken($primary-color, 9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -78,7 +79,7 @@
 
   // branding side
   &-branding {
-    background: darken($primary-color, 8);
+    background: darken($primary-color, 7);
     @include easeOut;
     transform: translate3d(0, 100%, 0);
 
