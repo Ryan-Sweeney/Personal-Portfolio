@@ -7,6 +7,13 @@ $background-opacity: 0.8;
 @mixin easeOut {
   transition: all ease-out 0.2s;
 }
+@mixin easeIn {
+  transition: all ease-in 0.2s;
+}
+
+@mixin easeInOut {
+    transition: all ease-in-out 0.2s;
+}
 
 @mixin background {
   @if $show-home-image {
@@ -64,14 +71,14 @@ $background-opacity: 0.8;
 
 // large screen
 @mixin mediaLg {
-  @media screen and (min-width: 769px), (max-width: 1170px) {
+  @media screen and (min-width: 769px), (max-width: 1070px) {
     @content;
   }
 }
 
 // x-large screen
 @mixin mediaXl {
-  @media screen and (min-width: 1171px) {
+  @media screen and (min-width: 1071px) {
     @content;
   }
 }

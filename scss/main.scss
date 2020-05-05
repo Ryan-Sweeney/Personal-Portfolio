@@ -5,8 +5,6 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   @include background;
   background: $primary-color;
@@ -51,6 +49,7 @@ header {
   color: $seconday-color;
 }
 
+// main styles
 main {
   padding: 4rem;
   // height: 100%;
@@ -76,7 +75,7 @@ main {
     }
   }
 }
-
+// about page
 // grid-template-areas about page
 .about-info {
   display: grid;
@@ -117,19 +116,67 @@ main {
   }
 }
 
-#main-footer {
-    padding: 1rem;
-    background: darken($primary-color, 10);
-    color: set-text-color($primary-color);
-    height: 10rem;
-    margin: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:  column;
+// work page / projects
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.2rem;
+  border: 0.3rem solid lighten($primary-color, 2);
+  border-radius: 10px;
+  padding: 1rem;
 
-    .icons {
+  img {
+    width: 100%;
+    border: 1px solid #fff;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $seconday-color;
+      @include easeOut();
+    }
+  }
+}
+
+// button style
+.btn {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $seconday-color;
+    color: set-text-color($seconday-color);
+  }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 10);
+    color: #fff;
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 40);
+    color: #333;
+}
+
+
+// footer all
+#main-footer {
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 10rem;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .icons {
     margin-top: 1rem;
 
     a {
@@ -144,4 +191,3 @@ main {
 }
 
 @import "mobile";
-
